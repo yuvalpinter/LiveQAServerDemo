@@ -135,13 +135,17 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
         }
 
         final long timeElapsed = System.currentTimeMillis() - getTime;
-        answerElement.setAttribute(ANSWER_PARTICIPANT_ID_ATTRIBUTE_NAME, PARTICIPANT_ID);
+        answerElement.setAttribute(ANSWER_PARTICIPANT_ID_ATTRIBUTE_NAME, participantId());
         answerElement.setAttribute(ANSWER_REPORTED_TIME_MILLISECONDS_ATTRIBUTE_NAME, Long.toString(timeElapsed));
         answerElement.setAttribute(QUESTION_ID_PARAMETER_NAME, qid);
         logger.info("Internal time logged: " + timeElapsed);
 
         String resp = XmlUtils.writeDocumentToString(doc);
         return new Response(resp);
+    }
+
+    protected String participantId() {
+        return PARTICIPANT_ID;
     }
 
     /**
