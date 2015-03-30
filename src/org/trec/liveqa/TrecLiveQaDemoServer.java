@@ -31,6 +31,8 @@ import fi.iki.elonen.NanoHTTPD;
  */
 public class TrecLiveQaDemoServer extends NanoHTTPD {
 
+    public static final String PARTICIPANT_ID = "demo-id-01";
+    
     public static final String QUESTION_ID_PARAMETER_NAME = "qid";
     public static final String QUESTION_TITLE_PARAMETER_NAME = "title";
     public static final String QUESTION_BODY_PARAMETER_NAME = "body";
@@ -38,6 +40,7 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
 
     public static final String ANSWER_ROOT_ELEMENT_NAME = "xml";
     public static final String ANSWER_BASE_ELEMENT_NAME = "answer";
+    public static final String ANSWER_PARTICIPANT_ID_ATTRIBUTE_NAME = "pid";
     public static final String ANSWER_ANSWERED_YES_NO_ATTRIBUTE_NAME = "answered";
     public static final String ANSWER_REPORTED_TIME_MILLISECONDS_ATTRIBUTE_NAME = "time";
     public static final String ANSWER_WHY_NOT_ANSWERED_ELEMENT_NAME = "discard-reason";
@@ -132,7 +135,9 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
         }
 
         final long timeElapsed = System.currentTimeMillis() - getTime;
+        answerElement.setAttribute(ANSWER_PARTICIPANT_ID_ATTRIBUTE_NAME, PARTICIPANT_ID);
         answerElement.setAttribute(ANSWER_REPORTED_TIME_MILLISECONDS_ATTRIBUTE_NAME, Long.toString(timeElapsed));
+        answerElement.setAttribute(QUESTION_ID_PARAMETER_NAME, qid);
         logger.info("Internal time logged: " + timeElapsed);
 
         String resp = XmlUtils.writeDocumentToString(doc);
