@@ -2,5 +2,21 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/MediaAnalysis/lib/jsoup-1.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yuvalp/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="commons-httpclient"/>
+			<attribute name="maven.artifactId" value="commons-httpclient"/>
+			<attribute name="maven.version" value="3.1"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-configuration-1.9.jar"/>
+	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
