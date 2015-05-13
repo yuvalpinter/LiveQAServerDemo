@@ -47,7 +47,9 @@ public class GetYAnswersPropertiesFromQid {
          * @param e
          * @return
          */
-        boolean check(Element e);
+        public boolean check(Element e);
+        
+        public String getText(Element e);
 
     }
 
@@ -55,7 +57,12 @@ public class GetYAnswersPropertiesFromQid {
 
         @Override
         public boolean check(Element e) {
-            return e.nodeName().equals("h1");
+            return e.nodeName().equals("meta") && e.attr("name").equals("title");
+        }
+
+        @Override
+        public String getText(Element e) {
+            return e.attr("content");
         }
 
     }
@@ -64,7 +71,12 @@ public class GetYAnswersPropertiesFromQid {
 
         @Override
         public boolean check(Element e) {
-            return e.nodeName().equals("span") && e.className().contains("ya-q-full-text");
+            return e.nodeName().equals("meta") && e.attr("name").equals("description");
+        }
+
+        @Override
+        public String getText(Element e) {
+            return e.attr("content");
         }
 
     }
@@ -77,6 +89,12 @@ public class GetYAnswersPropertiesFromQid {
             return false;
         }
 
+        @Override
+        public String getText(Element e) {
+            // implement your own...
+            return null;
+        }
+
     }
 
     public static class CheckTopLevelCategory implements ElementPredicate {
@@ -84,6 +102,11 @@ public class GetYAnswersPropertiesFromQid {
         @Override
         public boolean check(Element e) {
             return e.nodeName().equals("a") && e.className().contains("Clr-b");
+        }
+
+        @Override
+        public String getText(Element e) {
+            return e.text();
         }
 
     }
@@ -164,16 +187,18 @@ public class GetYAnswersPropertiesFromQid {
             // strip top levels
             Document doc = Jsoup.parse(responseBody, "UTF8", url);
             Element html = doc.child(0);
+            
             Element body = html.child(1);
+            Element head = html.child(0);
 
             // get category
             res.put("Top level Category", findElementText(body, cc));
 
             // get title
-            res.put("Title", findElementText(body, ct));
+            res.put("Title", findElementText(head, ct));
 
             // get body
-            res.put("Body", findElementText(body, cb));
+            res.put("Body", findElementText(head, cb));
 
             // get best answer
             // res.put("Best Answer", findElementText(body, cba));
@@ -195,7 +220,7 @@ public class GetYAnswersPropertiesFromQid {
 
     private static String findElementText(Element topElem, ElementPredicate f) {
         Element elem = findElement(topElem, f);
-        return elem == null ? "" : elem.text();
+        return elem == null ? "" : f.getText(elem);
     }
 
     private static Element findElement(Element e, ElementPredicate f) {
