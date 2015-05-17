@@ -12,11 +12,5 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-cli-1.2.jar"/>
-	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-codec-1.6.jar"/>
-	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-configuration-1.9.jar"/>
-	<classpathentry kind="lib" path="/HadoopUtils/lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
