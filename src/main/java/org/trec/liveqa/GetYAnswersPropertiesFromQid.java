@@ -218,7 +218,9 @@ public class GetYAnswersPropertiesFromQid {
 
             // get best answer
 	    Element best_answer_div = html.select("div#ya-best-answer").first();
-            res.put("Best Answer", findElementText(best_answer_div, cba));
+	    if (best_answer_div != null) {
+		res.put("Best Answer", findElementText(best_answer_div, cba));
+	    }
 
             responseBody.close();
 
