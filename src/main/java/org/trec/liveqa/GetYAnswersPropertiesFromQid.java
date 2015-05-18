@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -27,6 +27,8 @@ import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.json.simple.JSONValue;
+import org.json.simple.JSONObject;
 
 /**
  * Copyright 2015 Yahoo Inc.<br>
@@ -143,16 +145,16 @@ public class GetYAnswersPropertiesFromQid {
 
         for (String qid : qids) {
             System.out.println("Getting data for QID " + qid);
-            writer.append(qid + ":");
-            writer.newLine();
-            for (Entry<String, String> kv : extractData(qid).entrySet()) {
-                writer.append(kv.getKey() + "\t" + kv.getValue());
-                writer.newLine();
-		writer.flush();
-            }
-            writer.newLine();
-        }
-        writer.flush();
+	    Map<String, String> data = extractData(qid);
+	    JSONObject jo = new JSONObject();
+	    for (Map.Entry<String, String> e : data.entrySet()) {
+		jo.put(e.getKey(), JSONValue.escape(e.getValue()));
+	    }
+
+	    writer.append(jo.toString());
+	    writer.newLine();
+	    writer.flush();
+	}
         writer.close();
     }
 
@@ -180,7 +182,8 @@ public class GetYAnswersPropertiesFromQid {
      */
     public static Map<String, String> extractData(String iQid) throws Exception {
 
-        Map<String, String> res = new HashMap<>();
+        Map<String, String> res = new LinkedHashMap<>();
+	res.put("qid", iQid);
 
         // parse date from qid
         res.put("Date", DATE_FORMAT.parse(iQid.substring(0, 14)).toString());
@@ -196,7 +199,7 @@ public class GetYAnswersPropertiesFromQid {
                 System.err.println("Method failed: " + method.getStatusLine());
             }
             InputStream responseBody = method.getResponseBodyAsStream();
-
+	    
             // strip top levels
             Document doc = Jsoup.parse(responseBody, "UTF8", url);
             Element html = doc.child(0);
