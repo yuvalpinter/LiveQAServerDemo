@@ -81,18 +81,29 @@ public class GetYAnswersPropertiesFromQid {
 
     }
 
-    public static class CheckBestAnswer implements ElementPredicate {
+    public static class CheckKeywords implements ElementPredicate {
 
         @Override
         public boolean check(Element e) {
-            // implement your own...
-            return false;
+            return e.nodeName().equals("meta") && e.attr("name").equals("keywords");
         }
 
         @Override
         public String getText(Element e) {
-            // implement your own...
-            return null;
+            return e.attr("content");
+        }
+
+    }
+    public static class CheckBestAnswer implements ElementPredicate {
+
+        @Override
+        public boolean check(Element e) {
+	    return e.nodeName().equals("span") && e.className().contains("ya-q-full-text");
+        }
+
+        @Override
+        public String getText(Element e) {
+	    return e.text();
         }
 
     }
@@ -117,8 +128,9 @@ public class GetYAnswersPropertiesFromQid {
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyyMMddHHmmss", Locale.US);
     private static CheckTitle ct = new CheckTitle();
     private static CheckBody cb = new CheckBody();
+    private static CheckKeywords ck = new CheckKeywords();
     private static CheckTopLevelCategory cc = new CheckTopLevelCategory();
-    private static CheckBestAnswer cba = new CheckBestAnswer(); // not implemented
+    private static CheckBestAnswer cba = new CheckBestAnswer();
 
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
@@ -136,6 +148,7 @@ public class GetYAnswersPropertiesFromQid {
             for (Entry<String, String> kv : extractData(qid).entrySet()) {
                 writer.append(kv.getKey() + "\t" + kv.getValue());
                 writer.newLine();
+		writer.flush();
             }
             writer.newLine();
         }
@@ -200,8 +213,12 @@ public class GetYAnswersPropertiesFromQid {
             // get body
             res.put("Body", findElementText(head, cb));
 
+	    // get keywords
+	    res.put("Keywords", findElementText(head, ck));
+
             // get best answer
-            // res.put("Best Answer", findElementText(body, cba));
+	    Element best_answer_div = html.select("div#ya-best-answer").first();
+            res.put("Best Answer", findElementText(best_answer_div, cba));
 
             responseBody.close();
 
