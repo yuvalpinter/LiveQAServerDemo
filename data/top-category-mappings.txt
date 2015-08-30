@@ -1,0 +1,541 @@
+2010 FIFA World Cup(TM)	Sports
+Aberdeen	Travel
+Acapulco	Travel
+Add-ons	Computers & Internet
+Adelaide	Travel
+Africa & Middle East	Travel
+Agra	Travel
+Aguascalientes	Travel
+Ahmedabad	Travel
+Air Travel	Travel
+Algeria	Travel
+Allergies	Health
+Alsace	Travel
+Alternative Medicine	Health
+Ancona	Travel
+Andalucia	Travel
+Anguilla	Travel
+Aosta	Travel
+Aquitaine	Travel
+Aragon	Travel
+Argentina	Travel
+Argentinian Football (Soccer)	Sports
+Arts & Humanities	Arts & Humanities
+Aruba	Travel
+Asia Pacific	Travel
+Asturias	Travel
+Atlanta	Travel
+Auckland	Travel
+Austin	Travel
+Australia	Travel
+Australian Rules	Sports
+Austria	Travel
+Auto Racing	Sports
+Auvergne	Travel
+Baden-Wuerttemburg	Travel
+Bahamas	Travel
+Bahrain	Travel
+Baltic Sea	Travel
+Bangalore	Travel
+Barbados	Travel
+Bari	Travel
+Bariloche	Travel
+Baseball	Sports
+Basel	Travel
+Basketball	Sports
+Bavaria	Travel
+Beauty & Style	Beauty & Style
+Belfast	Travel
+Belgium	Travel
+Belo Horizonte	Travel
+Berlin	Travel
+Bermuda	Travel
+Bern	Travel
+Bhopal	Travel
+Birds	Pets
+Birmingham	Travel
+Black Forest	Travel
+Bologna	Travel
+Bolzano	Travel
+Books & Authors	Arts & Humanities
+Boston	Travel
+Bourgogne	Travel
+Boxing	Sports
+Brandenburg	Travel
+Brasilia	Travel
+Brazil	Travel
+Brazilian Football (Soccer)	Sports
+Bremen	Travel
+Bretagne	Travel
+Brighton	Travel
+Brisbane	Travel
+Bristol	Travel
+Buenos Aires	Travel
+Cabo San Lucas	Travel
+Cagliari	Travel
+Calgary	Travel
+Cambridge	Travel
+Campeche	Travel
+Camping	Sports
+Campobasso	Travel
+Can Tho	Travel
+Canada	Travel
+Canberra	Travel
+Cancer	Health
+Cancun	Travel
+Cantabria	Travel
+Cardiff	Travel
+Caribbean	Travel
+Carilo	Travel
+Castilla - La Mancha	Travel
+Castilla y Leon	Travel
+Catalunya	Travel
+Catanzaro	Travel
+Cats	Pets
+Centre	Travel
+Champagne - Ardenne	Travel
+Chandigarh	Travel
+Chennai	Travel
+Chetumal	Travel
+Chicago	Travel
+Chihuahua	Travel
+Chile	Travel
+China	Travel
+Christchurch	Travel
+Cincinnati	Travel
+Ciudad de Guanajuato	Travel
+Ciuded Juarez	Travel
+Cleaning & Laundry	Home & Garden
+Cleveland	Travel
+Climbing	Sports
+Cologne	Travel
+Compo Grande	Travel
+Computer Networking	Computers & Internet
+Computers & Internet	Computers & Internet
+Comunidad Valenciana	Travel
+Comunidad de Madrid	Travel
+Cordoba	Travel
+Cork	Travel
+Corse	Travel
+Costa Rica	Travel
+Cozumel	Travel
+Cricket	Sports
+Cruise Travel	Travel
+Cuba	Travel
+Cuernavaca	Travel
+Cuiaba	Travel
+Culiacan	Travel
+Curitiba	Travel
+Curling	Sports
+Cycling	Sports
+Da Lat	Travel
+Da Nang	Travel
+Dallas	Travel
+Dancing	Arts & Humanities
+Darwin	Travel
+Decorating & Remodeling	Home & Garden
+Delhi and NCR	Travel
+Denmark	Travel
+Dental	Health
+Denver	Travel
+Desktops	Computers & Internet
+Detroit	Travel
+Diabetes	Health
+Diet & Fitness	Health
+Diseases & Conditions	Health
+Do It Yourself (DIY)	Home & Garden
+Dogs	Pets
+Dominican Republic	Travel
+Drawing & Illustration	Arts & Humanities
+Dublin	Travel
+Dunedin	Travel
+Durango	Travel
+Ecuador	Travel
+Edinburgh	Travel
+Edmonton	Travel
+Egypt	Travel
+Eifel	Travel
+El Salvador	Travel
+Europe (Continental)	Travel
+Euskadi	Travel
+Extremadura	Travel
+Facebook	Computers & Internet
+Fantasy Sports	Sports
+Fashion & Accessories	Beauty & Style
+First Aid	Health
+Fish	Pets
+Fishing	Sports
+Flickr	Computers & Internet
+Florence	Travel
+Florianopolis	Travel
+Football (American)	Sports
+Football (Australian)	Sports
+Football (Canadian)	Sports
+Football (Soccer)	Sports
+Formula One	Sports
+Fortaleza	Travel
+France	Travel
+Franche - Comte	Travel
+Frankfurt	Travel
+French Football (Soccer)	Sports
+Galicia	Travel
+Galway	Travel
+Garden & Landscape	Home & Garden
+Genealogy	Arts & Humanities
+General Health Care	Health
+Geneva	Travel
+Genoa	Travel
+Germany	Travel
+Glasgow	Travel
+Goiania	Travel
+Golf	Sports
+Google	Computers & Internet
+Graz	Travel
+Greece	Travel
+Guadalajara	Travel
+Guadeloupe	Travel
+Gualeguaychu	Travel
+Guatemala	Travel
+Guyane	Travel
+Ha Long	Travel
+Hai Phong	Travel
+Hair	Beauty & Style
+Halifax	Travel
+Hamburg	Travel
+Handball	Sports
+Hanoi	Travel
+Hardware	Computers & Internet
+Harz	Travel
+Health	Health
+Health & Safety	Travel
+Heart Diseases	Health
+Hermosillo	Travel
+Hesse	Travel
+History	Arts & Humanities
+Ho Chi Minh	Travel
+Hobart	Travel
+Hockey	Sports
+Hoi An	Travel
+Home & Garden	Home & Garden
+Honolulu	Travel
+Horse Racing	Sports
+Horses	Pets
+Houston	Travel
+Hue	Travel
+Hunting	Sports
+Hyderabad	Travel
+Ice Skating	Sports
+Iguazu	Travel
+India	Travel
+Indianapolis	Travel
+Indonesia	Travel
+Indy Racing League (IRL)	Sports
+Infectious Diseases	Health
+Injuries	Health
+Internet	Computers & Internet
+Ireland	Travel
+Islas Baleares	Travel
+Islas Canarias	Travel
+Israel	Travel
+Italy	Travel
+Ixtapa-Zihuatanejo	Travel
+Jamaica	Travel
+Japan	Travel
+Kansas City	Travel
+Kenya	Travel
+Kolkatta	Travel
+Korea	Travel
+L`Aquila	Travel
+La Paz, Baja California	Travel
+La Plata	Travel
+La Reunion	Travel
+La Rioja	Travel
+Languedoc-Roussillon	Travel
+Laptops & Notebooks	Computers & Internet
+Las Vegas	Travel
+Latin America	Travel
+Lebanon	Travel
+Leeds	Travel
+Leon	Travel
+Limerick	Travel
+Limousin	Travel
+Linz	Travel
+Liverpool	Travel
+London	Travel
+Lorraine	Travel
+Los Angeles	Travel
+Lower Saxony	Travel
+Lucknow	Travel
+MSN	Computers & Internet
+Maceio	Travel
+Madagascar	Travel
+Maintenance & Repairs	Home & Garden
+Makeup	Beauty & Style
+Malaysia	Travel
+Maldives	Travel
+Manaus	Travel
+Manchester	Travel
+Mar del Plata	Travel
+Martial Arts	Sports
+Martinique	Travel
+Mauritius	Travel
+Mazanillo	Travel
+Mazatlan	Travel
+Mecklenburg-Western Pomerania	Travel
+Melbourne	Travel
+Men's Health	Health
+Men's Premiere Leagues (Italy)	Sports
+Men's Premiere Leagues (Latin America)	Sports
+Men's Premiere Leagues (Other)	Sports
+Men's Premiere Leagues (UK)	Sports
+Mendoza	Travel
+Mental Health	Health
+Merida	Travel
+Mexicali	Travel
+Mexican Football (Soccer)	Sports
+Mexico	Travel
+Mexico City	Travel
+Miami	Travel
+Milan	Travel
+Miramar	Travel
+Misi-Pyrenees	Travel
+Monitors	Computers & Internet
+Monterrey	Travel
+Montreal	Travel
+Morelia	Travel
+Morocco	Travel
+Motorcycle Racing	Sports
+Mumbai	Travel
+Munich	Travel
+Murcia	Travel
+MySpace	Computers & Internet
+NASCAR	Sports
+Naples	Travel
+Natal	Travel
+Navarra	Travel
+Nepal	Travel
+Netherlands	Travel
+New Orleans	Travel
+New York City	Travel
+New Zealand	Travel
+Newcastle	Travel
+Nha Trang	Travel
+Niagara Falls	Travel
+Nord-Pas-de-Calais	Travel
+Normandie	Travel
+North Rhine-Westphalia	Travel
+North Sea	Travel
+Oaxaca	Travel
+Olympics	Sports
+Optical	Health
+Orlando	Travel
+Other - Africa & Middle East	Travel
+Other - Argentina	Travel
+Other - Arts & Humanities	Arts & Humanities
+Other - Asia Pacific	Travel
+Other - Australia	Travel
+Other - Austria	Travel
+Other - Auto Racing	Sports
+Other - Beauty & Style	Beauty & Style
+Other - Brazil	Travel
+Other - Canada	Travel
+Other - Caribbean	Travel
+Other - Computers	Computers & Internet
+Other - Destinations	Travel
+Other - Destinations	Travel
+Other - Diseases	Health
+Other - Europe	Travel
+Other - Football	Sports
+Other - France	Travel
+Other - General Health Care	Health
+Other - Germany	Travel
+Other - Hardware	Computers & Internet
+Other - Health	Health
+Other - Home & Garden	Home & Garden
+Other - India	Travel
+Other - Internet	Computers & Internet
+Other - Ireland	Travel
+Other - Italy	Travel
+Other - Latin America	Travel
+Other - Mexico	Travel
+Other - New Zealand	Travel
+Other - Outdoor Recreation	Sports
+Other - Pets	Pets
+Other - Skin & Body	Beauty & Style
+Other - Soccer	Sports
+Other - Spain	Travel
+Other - Sports	Sports
+Other - Switzerland	Travel
+Other - United Kingdom	Travel
+Other - United States	Travel
+Other - Vietnam	Travel
+Other - Visual Arts	Arts & Humanities
+Other - Winter Sports	Sports
+Ottawa	Travel
+Outdoor Recreation	Sports
+Oxford	Travel
+Packing & Preparation	Travel
+Pain & Pain Management	Health
+Painting	Arts & Humanities
+Palermo	Travel
+Palmas	Travel
+Panaji	Travel
+Panama	Travel
+Paris	Travel
+Pays-de-la-Loire	Travel
+Performing Arts	Arts & Humanities
+Perth	Travel
+Peru	Travel
+Perugia	Travel
+Pets	Pets
+Phan Thiet	Travel
+Philadelphia	Travel
+Philippines	Travel
+Philosophy	Arts & Humanities
+Phoenix	Travel
+Photography	Arts & Humanities
+Phu Quoc	Travel
+Picardie	Travel
+Pinamar	Travel
+Playa del Carmen	Travel
+Poetry	Arts & Humanities
+Poitou-Charentes	Travel
+Poland	Travel
+Pondicherry	Travel
+Portland	Travel
+Porto Alegre	Travel
+Porto Velho	Travel
+Portugal	Travel
+Potenza	Travel
+Printers	Computers & Internet
+Programming & Design	Computers & Internet
+Provence-Alpes-Cote d`Azur	Travel
+Puebla	Travel
+Puerto Rico	Travel
+Puerto Vallarta	Travel
+Pune	Travel
+Quang Binh	Travel
+Quebec	Travel
+Queenstown	Travel
+Queretaro	Travel
+Quy Nhon	Travel
+Recife	Travel
+Reptiles	Pets
+Respiratory Diseases	Health
+Rhineland-Palatinate	Travel
+Rhone-Alpes	Travel
+Rio Branco	Travel
+Rio de Janeiro	Travel
+Rodents	Pets
+Rome	Travel
+Rosario	Travel
+Ruegen	Travel
+Rugby	Sports
+Rugby League	Sports
+Rugby Union	Sports
+Running	Sports
+Russia	Travel
+STDs	Health
+Saarland	Travel
+Sacramento	Travel
+Salta	Travel
+Saltillo	Travel
+Salvador	Travel
+Salzburg	Travel
+San Antonio	Travel
+San Bernardo	Travel
+San Cristobal de las Casas	Travel
+San Diego	Travel
+San Francisco	Travel
+San Jose	Travel
+San Luis Potosi	Travel
+San Miguel de Allende	Travel
+Sao Luis	Travel
+Sao Paulo	Travel
+Sapa	Travel
+Saudi Arabia	Travel
+Saxony	Travel
+Saxony-Anhalt	Travel
+Scanners	Computers & Internet
+Schleswig-Holstein	Travel
+Scottish Football (Soccer)	Sports
+Sculpture	Arts & Humanities
+Seattle	Travel
+Security	Computers & Internet
+Seychelles	Travel
+Sheffield	Travel
+Singapore	Travel
+Skin & Body	Beauty & Style
+Skin Conditions	Health
+Snooker & Pool	Sports
+Snow Skiing	Sports
+Snowboarding	Sports
+Software	Computers & Internet
+South Africa	Travel
+Spain	Travel
+Sports	Sports
+St. Barts	Travel
+St. John's	Travel
+St. Louis	Travel
+Surat	Travel
+Surfing	Sports
+Swansea	Travel
+Swimming & Diving	Sports
+Switzerland	Travel
+Sydney	Travel
+Taiwan	Travel
+Tattoos	Beauty & Style
+Tay Nguyen	Travel
+Tennis	Sports
+Thailand	Travel
+Theater & Acting	Arts & Humanities
+Thiruvananthapuram	Travel
+Thuringia	Travel
+Tijuana	Travel
+Toluca	Travel
+Toronto	Travel
+Torreon	Travel
+Travel	Travel
+Travel (General)	Travel
+Trento	Travel
+Trieste	Travel
+Trinidad & Tobago	Travel
+Tulum	Travel
+Tunisia	Travel
+Turin	Travel
+Turkey	Travel
+Turks & Caicos	Travel
+UEFA Champions League	Sports
+United Arab Emirates	Travel
+United Kingdom	Travel
+United States	Travel
+Uruguay	Travel
+Vadodara	Travel
+Vancouver	Travel
+Venezuela	Travel
+Venice	Travel
+Veracruz	Travel
+Victoria	Travel
+Vienna	Travel
+Vietnam	Travel
+Villa Gesell	Travel
+Villahermosa	Travel
+Virgin Islands	Travel
+Visual Arts	Arts & Humanities
+Vitoria	Travel
+Volleyball	Sports
+Vung Tau	Travel
+Washington, D.C.	Travel
+Water Sports	Sports
+Waterford	Travel
+Wellington	Travel
+Wikipedia	Computers & Internet
+Winnipeg	Travel
+Winter Sports	Sports
+Women's Health	Health
+Women's Premiere Leagues	Sports
+Wrestling	Sports
+YouTube	Computers & Internet
+Zacatecas	Travel
+Zurich	Travel
+lle-de-France	Travel
