@@ -13,6 +13,3 @@ hs_err_pid*
 /bin/
 /.project
 /.externalToolBuilders/
-/build/
-/*.xml
-/.classpath
