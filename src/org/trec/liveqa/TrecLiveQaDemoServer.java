@@ -171,7 +171,7 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
     }
 
     private static String dummySpan(int length) {
-        return "0-" + Math.max(length, Math.min(length / 10, 10));
+        return "0-" + Math.min(length, Math.max(length / 10, 10));
     }
 
     protected static class AnswerAndResourcesAndFoci {
