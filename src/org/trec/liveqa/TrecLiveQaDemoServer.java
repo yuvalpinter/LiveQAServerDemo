@@ -32,7 +32,7 @@ import fi.iki.elonen.NanoHTTPD;
 public class TrecLiveQaDemoServer extends NanoHTTPD {
 
     public static final String PARTICIPANT_ID = "demo-id-01";
-    
+
     public static final String QUESTION_ID_PARAMETER_NAME = "qid";
     public static final String QUESTION_TITLE_PARAMETER_NAME = "title";
     public static final String QUESTION_BODY_PARAMETER_NAME = "body";
@@ -47,6 +47,8 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
     public static final String ANSWER_CONTENT_ELEMENT_NAME = "content";
     public static final String ANSWER_RESOURCES_ELEMENT_NAME = "resources";
     public static final String RESOURCES_LIST_SEPARATOR = ",";
+    public static final String TITLE_FOCUS = "title-focus";
+    public static final String BODY_FOCUS = "body-focus";
 
     public static final String YES = "yes";
     public static final String NO = "no";
@@ -96,9 +98,9 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
         logger.info("QID: " + qid);
 
         // "get answer"
-        AnswerAndResources answerAndResources = null;
+        AnswerAndResourcesAndFoci answerAndResources = null;
         try {
-            answerAndResources = getAnswerAndResources(qid, title, body, category);
+            answerAndResources = getAnswerAndResourcesAndFoci(qid, title, body, category);
         } catch (Exception e) {
             logger.warning("Failed to retrieve answer and resources");
             e.printStackTrace();
@@ -127,7 +129,11 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
             XmlUtils.addElementWithText(doc, answerElement, ANSWER_CONTENT_ELEMENT_NAME, answerAndResources.answer());
             XmlUtils.addElementWithText(doc, answerElement, ANSWER_RESOURCES_ELEMENT_NAME,
                             answerAndResources.resources());
-            logger.info("Response: " + answerAndResources.answer() + "; Resources: " + answerAndResources.resources());
+            XmlUtils.addElementWithText(doc, answerElement, TITLE_FOCUS, answerAndResources.titleFocus());
+            XmlUtils.addElementWithText(doc, answerElement, BODY_FOCUS, answerAndResources.bodyFocus());
+            logger.info("Response: " + answerAndResources.answer() + "; Resources: " + answerAndResources.resources()
+                            + "; Title focus: " + answerAndResources.titleFocus() + "; Body focus: "
+                            + answerAndResources.bodyFocus());
         } else {
             answerElement.setAttribute(ANSWER_ANSWERED_YES_NO_ATTRIBUTE_NAME, NO);
             XmlUtils.addElementWithText(doc, answerElement, ANSWER_WHY_NOT_ANSWERED_ELEMENT_NAME, EXCUSE);
@@ -155,22 +161,31 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
      * @param title question title (roughly 10 words)
      * @param body question body (could be empty, could be lengthy)
      * @param category (verbal description)
-     * @return server's answer and a list of resources
+     * @return server's answer, a list of resources and two spans containing (title, body) focus
      * @throws InterruptedException
      */
-    protected AnswerAndResources getAnswerAndResources(String qid, String title, String body, String category)
-                    throws InterruptedException {
-        return new AnswerAndResources("my answer", "resource1,resource2");
+    protected AnswerAndResourcesAndFoci getAnswerAndResourcesAndFoci(String qid, String title, String body,
+                    String category) throws InterruptedException {
+        return new AnswerAndResourcesAndFoci("my answer", "resource1,resource2", dummySpan(title.length()),
+                        dummySpan(body.length()));
     }
 
-    protected static class AnswerAndResources {
+    private static String dummySpan(int length) {
+        return "0-" + Math.min(length, Math.max(length / 10, 10));
+    }
+
+    protected static class AnswerAndResourcesAndFoci {
 
         private String answer;
         private String resources;
+        private String titleFocus;
+        private String bodyFocus;
 
-        public AnswerAndResources(String iAnswer, String iResources) {
+        public AnswerAndResourcesAndFoci(String iAnswer, String iResources, String iTitleFocus, String iBodyFocus) {
             answer = iAnswer;
             resources = iResources;
+            titleFocus = iTitleFocus;
+            bodyFocus = iBodyFocus;
         }
 
         public String answer() {
@@ -179,6 +194,14 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
 
         public String resources() {
             return resources;
+        }
+
+        public String titleFocus() {
+            return titleFocus;
+        }
+
+        public String bodyFocus() {
+            return bodyFocus;
         }
 
     }
