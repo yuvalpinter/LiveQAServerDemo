@@ -23,7 +23,7 @@ public class SomeUseCasesServer extends TrecLiveQaDemoServer {
     }
 
     @Override
-    protected AnswerAndResourcesAndSummaries getAnswerAndResourcesAndFoci(String qid, String title, String body, String category)
+    protected AnswerAndResourcesAndSummaries getAnswerAndResourcesAndSummaries(String qid, String title, String body, String category)
                     throws InterruptedException {
         if (qid.contains("F")) {
             // "random failure"
