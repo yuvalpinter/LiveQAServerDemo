@@ -47,8 +47,9 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
     public static final String ANSWER_CONTENT_ELEMENT_NAME = "content";
     public static final String ANSWER_RESOURCES_ELEMENT_NAME = "resources";
     public static final String RESOURCES_LIST_SEPARATOR = ",";
-    public static final String TITLE_FOCUS = "title-focus";
-    public static final String BODY_FOCUS = "body-focus";
+    public static final String TITLE_FOCI = "title-foci";
+    public static final String BODY_FOCI = "body-foci";
+    public static final String QUESTION_SUMMARY = "summary";
 
     public static final String YES = "yes";
     public static final String NO = "no";
@@ -98,7 +99,7 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
         logger.info("QID: " + qid);
 
         // "get answer"
-        AnswerAndResourcesAndFoci answerAndResources = null;
+        AnswerAndResourcesAndSummaries answerAndResources = null;
         try {
             answerAndResources = getAnswerAndResourcesAndFoci(qid, title, body, category);
         } catch (Exception e) {
@@ -129,11 +130,12 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
             XmlUtils.addElementWithText(doc, answerElement, ANSWER_CONTENT_ELEMENT_NAME, answerAndResources.answer());
             XmlUtils.addElementWithText(doc, answerElement, ANSWER_RESOURCES_ELEMENT_NAME,
                             answerAndResources.resources());
-            XmlUtils.addElementWithText(doc, answerElement, TITLE_FOCUS, answerAndResources.titleFocus());
-            XmlUtils.addElementWithText(doc, answerElement, BODY_FOCUS, answerAndResources.bodyFocus());
+            XmlUtils.addElementWithText(doc, answerElement, TITLE_FOCI, answerAndResources.titleFoci());
+            XmlUtils.addElementWithText(doc, answerElement, BODY_FOCI, answerAndResources.bodyFoci());
+            XmlUtils.addElementWithText(doc, answerElement, QUESTION_SUMMARY, answerAndResources.summary());
             logger.info("Response: " + answerAndResources.answer() + "; Resources: " + answerAndResources.resources()
-                            + "; Title focus: " + answerAndResources.titleFocus() + "; Body focus: "
-                            + answerAndResources.bodyFocus());
+                            + "; Title foci: " + answerAndResources.titleFoci() + "; Body foci: "
+                            + answerAndResources.bodyFoci() + "; Summary: " + answerAndResources.summary());
         } else {
             answerElement.setAttribute(ANSWER_ANSWERED_YES_NO_ATTRIBUTE_NAME, NO);
             XmlUtils.addElementWithText(doc, answerElement, ANSWER_WHY_NOT_ANSWERED_ELEMENT_NAME, EXCUSE);
@@ -164,28 +166,47 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
      * @return server's answer, a list of resources and two spans containing (title, body) focus
      * @throws InterruptedException
      */
-    protected AnswerAndResourcesAndFoci getAnswerAndResourcesAndFoci(String qid, String title, String body,
+    protected AnswerAndResourcesAndSummaries getAnswerAndResourcesAndFoci(String qid, String title, String body,
                     String category) throws InterruptedException {
-        return new AnswerAndResourcesAndFoci("my answer", "resource1,resource2", dummySpan(title.length()),
-                        dummySpan(body.length()));
+        return new AnswerAndResourcesAndSummaries("my answer", "resource1,resource2", dummyFirstSpan(title.length()),
+                        dummyTwoSpans(body.length()), "my summary");
     }
 
-    private static String dummySpan(int length) {
+    public static String dummyTwoSpans(int length) {
+        String first = dummyFirstSpan(length);
+        String second = dummySecondSpan(length);
+        if (second == null) {
+            return first;
+        }
+        return first + "," + second;
+    }
+
+    private static String dummyFirstSpan(int length) {
         return "0-" + Math.min(length, Math.max(length / 10, 10));
     }
 
-    protected static class AnswerAndResourcesAndFoci {
+    private static String dummySecondSpan(int length) {
+        int minMax = Math.max(length / 10, 15);
+        if (minMax >= length) {
+            return null;
+        }
+        return (int) Math.max(minMax, Math.min(length * 0.9, length - 10)) + "-" + length;
+    }
+
+    protected static class AnswerAndResourcesAndSummaries {
 
         private String answer;
         private String resources;
-        private String titleFocus;
-        private String bodyFocus;
+        private String titleFoci;
+        private String bodyFoci;
+        private String summary;
 
-        public AnswerAndResourcesAndFoci(String iAnswer, String iResources, String iTitleFocus, String iBodyFocus) {
+        public AnswerAndResourcesAndSummaries(String iAnswer, String iResources, String iTitleFoci, String iBodyFoci, String iSummmary) {
             answer = iAnswer;
             resources = iResources;
-            titleFocus = iTitleFocus;
-            bodyFocus = iBodyFocus;
+            titleFoci = iTitleFoci;
+            bodyFoci = iBodyFoci;
+            summary = iSummmary;
         }
 
         public String answer() {
@@ -196,12 +217,16 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
             return resources;
         }
 
-        public String titleFocus() {
-            return titleFocus;
+        public String titleFoci() {
+            return titleFoci;
         }
 
-        public String bodyFocus() {
-            return bodyFocus;
+        public String bodyFoci() {
+            return bodyFoci;
+        }
+
+        public String summary() {
+            return summary;
         }
 
     }
