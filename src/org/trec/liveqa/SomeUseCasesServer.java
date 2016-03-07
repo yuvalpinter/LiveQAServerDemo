@@ -23,7 +23,7 @@ public class SomeUseCasesServer extends TrecLiveQaDemoServer {
     }
 
     @Override
-    protected AnswerAndResourcesAndFoci getAnswerAndResourcesAndFoci(String qid, String title, String body, String category)
+    protected AnswerAndResourcesAndSummaries getAnswerAndResourcesAndFoci(String qid, String title, String body, String category)
                     throws InterruptedException {
         if (qid.contains("F")) {
             // "random failure"
@@ -43,7 +43,7 @@ public class SomeUseCasesServer extends TrecLiveQaDemoServer {
         }
         resourceSb.append(title.length() + body.length());
 
-        return new AnswerAndResourcesAndFoci(title + WEASEL_TEXT, resourceSb.toString(), "", "");
+        return new AnswerAndResourcesAndSummaries(title + WEASEL_TEXT, resourceSb.toString(), "", "", "");
     }
 
     public static void main(String[] args) throws IOException {
