@@ -101,7 +101,7 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
         // "get answer"
         AnswerAndResourcesAndSummaries answerAndResources = null;
         try {
-            answerAndResources = getAnswerAndResourcesAndFoci(qid, title, body, category);
+            answerAndResources = getAnswerAndResourcesAndSummaries(qid, title, body, category);
         } catch (Exception e) {
             logger.warning("Failed to retrieve answer and resources");
             e.printStackTrace();
@@ -166,7 +166,7 @@ public class TrecLiveQaDemoServer extends NanoHTTPD {
      * @return server's answer, a list of resources and two spans containing (title, body) focus
      * @throws InterruptedException
      */
-    protected AnswerAndResourcesAndSummaries getAnswerAndResourcesAndFoci(String qid, String title, String body,
+    protected AnswerAndResourcesAndSummaries getAnswerAndResourcesAndSummaries(String qid, String title, String body,
                     String category) throws InterruptedException {
         return new AnswerAndResourcesAndSummaries("my answer", "resource1,resource2", dummyFirstSpan(title.length()),
                         dummyTwoSpans(body.length()), "my summary");
