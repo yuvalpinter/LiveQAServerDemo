@@ -6,4 +6,5 @@ To implement your own server, extending this class and overriding its `getAnswer
 For comments and questions regarding code and implementation: [uvp@gatech.edu](mailto:uvp@gatech.edu)<br><br>
 
 3rd party open source code included in this project: NanoHTTPD (BSD license).<br>
+Libraries required for build: jsoup 1.8.1, apache commons httpclient 3.1<br>
 Code licensed under the MIT license. See LICENSE file for terms.
